@@ -8,7 +8,6 @@ import React from "react";
 function Footer() {
   return (
     <div className=" flex justify-center bg-red-900 text-white">
-      {/*fizemos um fixed bottom-o para deixar o footer no fim da página*/}
       <div className="container flex flex-col items-center py-4">
         <p className="text-xl font-bold">
           NossoPomar | Copyright:{" NossoPomar"}

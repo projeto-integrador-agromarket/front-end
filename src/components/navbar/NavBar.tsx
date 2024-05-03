@@ -18,8 +18,8 @@ function Navbar() {
             <Link to="/aboutus" className="hover:underline">
               Sobre Nós
             </Link>
-            <Link to="/contact" className="hover:underline">
-              Contato
+            <Link to="/login" className="hover:underline">
+              Login
             </Link>
           </div>
         </div>
