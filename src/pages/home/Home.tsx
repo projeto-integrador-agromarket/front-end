@@ -1,5 +1,3 @@
-import React from "react";
-import logo from "../../assets/logoEditado.png";
 import "./Home.css";
 
 function Home() {
@@ -10,7 +8,7 @@ function Home() {
           <div className="flex flex-col gap-4 items-center justify-center py-4">
             <div className="text-center">
               <h2 className="text-5xl font-bold ">
-                Sejam bem vindes ao NossoPomar!
+                Imaginem um carrosel aqui
               </h2>
             </div>
           </div>
