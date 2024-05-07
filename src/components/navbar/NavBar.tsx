@@ -63,13 +63,12 @@ function Navbar() {
             <Link to="/" className="hover:underline">
               Login
             </Link>
-            <Link to="/aboutus" className="hover:underline">
+            <Link to="/cadastro" className="hover:underline">
               Cadastre-se
             </Link>
             <Link to="/login" className="hover:underline">
               Carrinho
             </Link>
-            <Link to="cadastro">Cadastro</Link>
           </div>
         </div>
       </div>
