@@ -1,6 +1,5 @@
 import React from "react";
 import logo from "../../assets/logoEditado.png";
-import "./Home.css";
 
 function Home() {
   return (

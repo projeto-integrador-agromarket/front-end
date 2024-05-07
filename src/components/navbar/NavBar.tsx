@@ -21,6 +21,7 @@ function Navbar() {
             <Link to="/login" className="hover:underline">
               Login
             </Link>
+            <Link to="cadastro">Cadastro</Link>
           </div>
         </div>
       </div>
