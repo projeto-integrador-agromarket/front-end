@@ -15,7 +15,11 @@ module.exports = {
       'white-new':'#f7f7ff',
       'gray':'#a8a29e',
       'black-new':'#171717',
-      'opaco-white': '#e8e7de'
+      'opaco-white': '#e8e7de',
+      'brown': '#694A38',
+      'mint-cream': '#E5ECE9',
+      'battleship-gray': '#969A97',
+      'timber-wolf': '#D6D1CD'
     },
   },
   plugins: [],
