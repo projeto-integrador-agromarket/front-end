@@ -4,23 +4,24 @@ import logo from "../../assets/logoEditado.png";
 function Navbar() {
   return (
     <>
-      <div className="w-full bg-meddium-orange text-white-new flex justify-center py-4 items-center">
+      {/* <!--PRIMEIRO MENU--> */}
+      <div className="w-full bg-meddium-orange text-white-new flex justify-center py-4 items-center gap-4">
         <div className="container flex justify-between text-lg items-center">
           <div className="text-2xl font-bold uppercase flex items-center">
             {/*<img src={logo} className="h-20 w-15" />*/}
             <h1>Nosso Pomar</h1>
           </div>
-          <div className="mb-0 w-2/5">
+          {/* <!--Barra de pesquisa--> */}
+          <div className="mb-0 grow mx-20">
             <div className="relative flex w-full flex-wrap items-stretch">
               <input
                 type="search"
                 className="relative m-0 block flex-auto rounded-l border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
                 placeholder="Busque produtos aqui"
                 aria-label="Search"
-                aria-describedby="button-addon2"
-              />
+                aria-describedby="button-addon2"/>
 
-              {/* <!--Search icon--> */}
+              {/* <!--Pesquisar icon--> */}
               <span
                 className="input-group-text flex items-center whitespace-nowrap rounded-r px-4 py-1.5 text-center text-base font-normal text-neutral-700 dark:text-neutral-200 bg-dark-orange"
                 id="basic-addon2"
@@ -40,6 +41,7 @@ function Navbar() {
               </span>
             </div>
           </div>
+          {/* <!--Fim Barra de pesquisa--> */}
           <div className="flex gap-4">
             <Link to="/home" className="hover:text-light-orange">
               Home
@@ -52,10 +54,26 @@ function Navbar() {
           </div>
         </div>
       </div>
+      {/* <!--FIM PRIMEIRO MENU--> */}
 
-      <div className="w-full bg-light-orange text-white flex justify-center py-4">
-        <div className="container flex justify-between text-lg"></div>
+      {/* <!--SEGUNDO MENU--> */}
+      <div className="w-full bg-light-orange text-white-new flex justify-center py-1">
+        <div className="container flex justify-between text-lg items-left flex-row-reverse">
+          <div className="flex gap-4">
+            <Link to="/" className="hover:underline">
+              Login
+            </Link>
+            <Link to="/aboutus" className="hover:underline">
+              Cadastre-se
+            </Link>
+            <Link to="/login" className="hover:underline">
+              Carrinho
+            </Link>
+          </div>
+        </div>
       </div>
+      {/* <!--FIM SEGUNDO MENU--> */}
+
     </>
   );
 }
