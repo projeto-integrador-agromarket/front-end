@@ -6,6 +6,10 @@ import Login from "./pages/login/Login";
 import AboutUs from "./pages/aboutus/AboutUs";
 import Cadastro from "./pages/cadastro/Cadastro";
 import { AuthProvider } from "./contexts/AuthContext";
+import Footer1 from "./components/footer/Footer1";
+import ListarCategorias from "./components/categorias/listarCategorias/ListarCategoria";
+import FormularioCategoria from "./components/categorias/formularioCategoria/FormularioCategoria";
+import DeletarCategoria from "./components/categorias/deletarCategorias/DeletarCategorias";
 
 function App() {
   return (
@@ -20,9 +24,22 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/cadastro" element={<Cadastro />} />
               <Route path="/aboutus" element={<AboutUs />} />
+              <Route path="/categorias" element={<ListarCategorias />} />
+              <Route
+                path="/cadastroCategoria"
+                element={<FormularioCategoria />}
+              />
+              <Route
+                path="/editarCategoria/:id"
+                element={<FormularioCategoria />}
+              />
+              <Route
+                path="/deletarCategoria/:id"
+                element={<DeletarCategoria />}
+              />
             </Routes>
           </div>
-          <Footer />
+          <Footer1 />
         </BrowserRouter>
       </AuthProvider>
     </>
