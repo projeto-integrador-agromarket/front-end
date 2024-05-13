@@ -1,10 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Dna } from "react-loader-spinner";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../contexts/AuthContext";
 import Categoria from "../../../models/Categoria";
 import { buscar } from "../../../services/Service";
-import CardCategorias from "../cardTemas/CardCategorias";
+import CardCategorias from "../cardCategorias/CardCategorias";
+import { DNA } from "react-loader-spinner";
 //import { toastAlerta } from "../../../utils/toastAlerta";
 
 function ListarCategorias() {
@@ -41,7 +41,7 @@ function ListarCategorias() {
   return (
     <>
       {categorias.length === 0 && (
-        <Dna
+        <DNA
           visible={true}
           height="200"
           width="200"
@@ -53,9 +53,9 @@ function ListarCategorias() {
       <div className="flex justify-center w-full my-4">
         <div className="container flex flex-col">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {categorias.map((tema) => (
+            {categorias.map((categoria) => (
               <>
-                <CardTemas key={tema.id} tema={tema} />
+                <CardCategorias key={categoria.id} categoria={categoria} />
               </>
             ))}
           </div>
