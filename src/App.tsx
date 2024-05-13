@@ -6,6 +6,8 @@ import Login from "./pages/login/Login";
 import AboutUs from "./pages/aboutus/AboutUs";
 import Cadastro from "./pages/cadastro/Cadastro";
 import { AuthProvider } from "./contexts/AuthContext";
+import ListarCategorias from "./components/categorias/listarCategorias/ListarCategoria";
+import FormularioCategoria from "./components/categorias/formularioCategoria/FormularioCategoria";
 
 function App() {
   return (
@@ -20,6 +22,13 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/cadastro" element={<Cadastro />} />
               <Route path="/aboutus" element={<AboutUs />} />
+              <Route path="/categoria" element={<ListarCategorias />} />
+              <Route
+                path="/cadastroCategoria"
+                element={<FormularioCategoria />}
+              />
+              <Route path="/editarCategoria/:id" element={<FormularioTema />} />
+              <Route path="/deletarCategoria/:id" element={<DeletarTema />} />
             </Routes>
           </div>
           <Footer />
