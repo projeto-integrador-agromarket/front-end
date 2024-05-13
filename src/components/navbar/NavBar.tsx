@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import logo from "../../assets/logoEditado.png";
+import { Link } from "react-router-dom"
 
 function Navbar() {
   return (
@@ -64,13 +63,13 @@ function Navbar() {
       <div className="w-full bg-light-orange text-white-new flex justify-center py-1">
         <div className="container flex justify-between text-lg items-left flex-row-reverse">
           <div className="flex gap-4">
-            <Link to="/" className="hover:underline">
+            <Link to="/" className="hover:text-light-orange">
               Login
             </Link>
-            <Link to="/cadastro" className="hover:underline">
+            <Link to="/cadastro" className="hover:text-light-orange">
               Cadastre-se
             </Link>
-            <Link to="/login" className="hover:underline">
+            <Link to="/login" className="hover:text-light-orange">
               Carrinho
             </Link>
           </div>
