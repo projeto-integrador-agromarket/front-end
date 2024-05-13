@@ -6,6 +6,7 @@ import Login from "./pages/login/Login";
 import AboutUs from "./pages/aboutus/AboutUs";
 import Cadastro from "./pages/cadastro/Cadastro";
 import { AuthProvider } from "./contexts/AuthContext";
+import Footer1 from "./components/footer/Footer1";
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
               <Route path="/aboutus" element={<AboutUs />} />
             </Routes>
           </div>
-          <Footer />
+          <Footer1 />
         </BrowserRouter>
       </AuthProvider>
     </>

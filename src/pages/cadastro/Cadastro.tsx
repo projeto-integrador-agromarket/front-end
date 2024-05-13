@@ -2,6 +2,7 @@ import React, { ChangeEvent, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Usuario from "../../models/Usuario";
 import { cadastrarUsuario } from "../../services/Service";
+import "./Cadastro.css"
 
 function Cadastro() {
   let navigate = useNavigate();
@@ -161,6 +162,7 @@ function Cadastro() {
             </button>
           </div>
         </form>
+        <div className="fundoCadastro hidden lg:block"></div>
       </div>
     </>
   );
