@@ -71,8 +71,8 @@ function Navbar() {
             <Link to="/cadastro" className="hover:underline">
               Cadastre-se
             </Link>
-            <Link to="/login" className="hover:underline">
-              Carrinho
+            <Link to="/cart" className="hover:underline">
+              <ShoppingCart size={29} />
             </Link>
           </div>
         </div>
