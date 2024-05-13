@@ -1,4 +1,6 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import logo from "../../assets/logoEditado.png";
+import { ShoppingCart } from "@phosphor-icons/react";
 
 function Navbar() {
   return (
@@ -66,10 +68,10 @@ function Navbar() {
             <Link to="/" className="hover:text-light-orange">
               Login
             </Link>
-            <Link to="/cadastro" className="hover:text-light-orange">
+            <Link to="/cadastro" className="hover:underline">
               Cadastre-se
             </Link>
-            <Link to="/login" className="hover:text-light-orange">
+            <Link to="/login" className="hover:underline">
               Carrinho
             </Link>
           </div>
