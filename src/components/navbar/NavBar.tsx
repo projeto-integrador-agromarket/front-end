@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/logoEditado.png";
+import {ShoppingCart} from "@phosphor-icons/react";
 
 function Navbar() {
   return (
@@ -63,11 +64,16 @@ function Navbar() {
             <Link to="/" className="hover:underline">
               Login
             </Link>
+            <p>|</p>
             <Link to="/cadastro" className="hover:underline">
               Cadastre-se
             </Link>
+            <p>|</p>
             <Link to="/login" className="hover:underline">
-              Carrinho
+            <div className="flex gap-2">
+            <ShoppingCart size={29} />
+        
+        </div>
             </Link>
           </div>
         </div>
