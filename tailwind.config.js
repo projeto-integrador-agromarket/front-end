@@ -10,6 +10,8 @@ module.exports = {
       'sand-orange': '#F7A961',
       'vanilla': '#F5EE9E',
       'light-green': '#B0FE76',
+      'dark-green-login':'#126603',
+      'meddium-green': '#21b407',
       'dark-green': '#002400',
       'nude': '#f1f1f1',
       'white-new':'#f7f7ff',
