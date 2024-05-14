@@ -8,8 +8,10 @@ import Cadastro from "./pages/cadastro/Cadastro";
 import { AuthProvider } from "./contexts/AuthContext";
 import Footer1 from "./components/footer/Footer1";
 import ListarCategorias from "./components/categorias/listarCategorias/ListarCategoria";
-import FormularioCategoria from "./components/categorias/formularioCategoria/FormularioCategoria";
+import FormularioCategoria from "./components/categorias/formularioCategorias/FormularioCategoria";
 import DeletarCategoria from "./components/categorias/deletarCategorias/DeletarCategorias";
+import ListarProdutos from "./components/produtos/listarProdutos/ListarProdutos";
+import FormularioProduto from "./components/produtos/formularioProdutos/FormularioProduto";
 
 function App() {
   return (
@@ -36,6 +38,12 @@ function App() {
               <Route
                 path="/deletarCategoria/:id"
                 element={<DeletarCategoria />}
+              />
+              <Route path="/produtos" element={<ListarProdutos />} />
+              <Route path="/cadastroProduto" element={<FormularioProduto />} />
+              <Route
+                path="/editarProduto/:id"
+                element={<FormularioProduto />}
               />
             </Routes>
           </div>

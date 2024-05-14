@@ -54,7 +54,9 @@ function Navbar() {
             <Link to="/cadastroCategoria" className="hover:text-light-orange">
               Cadastrar Categorias
             </Link>
-            <div className="hover:text-light-orange">Produtos</div>
+            <Link to="/produtos" className="hover:text-light-orange">
+              Produtos
+            </Link>
             <div className="hover:text-light-orange">Sair</div>
           </div>
         </div>
