@@ -10,14 +10,14 @@ function Navbar() {
         <div className="container flex justify-between text-lg items-center">
           <div className="text-2xl font-bold uppercase flex items-center">
             {/*<img src={logo} className="h-20 w-15" />*/}
-            <h1>Nosso Pomar</h1>
+            <h1>Nosso <span className="">Pomar</span></h1>
           </div>
           {/* <!--Barra de pesquisa--> */}
           <div className="mb-0 grow mx-20">
             <div className="relative flex w-full flex-wrap items-stretch">
               <input
                 type="search"
-                className="relative m-0 block flex-auto rounded-l border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
+                className="relative text-white-new m-0 block flex-auto rounded-l border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:focus:border-primary"
                 placeholder="Busque produtos aqui"
                 aria-label="Search"
                 aria-describedby="button-addon2"
@@ -65,12 +65,12 @@ function Navbar() {
 
       {/* <!--SEGUNDO MENU--> */}
       <div className="w-full bg-light-orange text-white-new flex justify-center py-1">
-        <div className="container flex justify-between text-lg items-left flex-row-reverse">
+        <div className="container flex justify-between text-lg items-left flex-row-reverse shadow-2xl">
           <div className="flex gap-4">
-            <Link to="/" className="hover:text-light-orange">
+            <Link to="/" className="hover:text-dark-orange">
               Login
             </Link>
-            <Link to="/cadastro" className="hover:underline">
+            <Link to="/cadastro" className=" hover:text-dark-orange">
               Cadastre-se
             </Link>
             <Link to="/cart" className="hover:underline">

@@ -4,7 +4,7 @@ import { AuthContext } from "../../../contexts/AuthContext";
 import Categoria from "../../../models/Categoria";
 import { buscar } from "../../../services/Service";
 import CardCategorias from "../cardCategorias/CardCategorias";
-import { DNA } from "react-loader-spinner";
+import { Dna } from "react-loader-spinner";
 //import { toastAlerta } from "../../../utils/toastAlerta";
 
 function ListarCategorias() {
@@ -41,7 +41,7 @@ function ListarCategorias() {
   return (
     <>
       {categorias.length === 0 && (
-        <DNA
+        <Dna
           visible={true}
           height="200"
           width="200"
