@@ -4,7 +4,7 @@ import Usuario from "./Usuario";
 export default interface Produto {
   id: number;
   nome: string;
-  validade: Date;
+  validade: string;
   foto: string;
   descricao: string;
   quantidade: number;

@@ -5,6 +5,7 @@ import { AuthContext } from "../../../contexts/AuthContext";
 import Produto from "../../../models/Produto";
 import { buscar } from "../../../services/Service";
 import CardProduto from "../cardProdutos/CardProduto";
+import ModalProduto from "../modalProduto/ModalProduto";
 //import { toastAlerta } from "../../../utils/toastAlerta";
 
 function ListarProdutos() {
@@ -43,6 +44,9 @@ function ListarProdutos() {
 
   return (
     <>
+      <div className="flex justify-around gap-4">
+        <ModalProduto />
+      </div>
       {produtos.length === 0 && (
         <DNA
           visible={true}

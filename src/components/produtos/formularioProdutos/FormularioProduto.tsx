@@ -25,7 +25,7 @@ function FormularioProduto() {
   const [produto, setProduto] = useState<Produto>({
     id: 0,
     nome: "",
-    validade: new Date(),
+    validade: "",
     foto: "",
     descricao: "",
     quantidade: 0,
@@ -90,7 +90,7 @@ function FormularioProduto() {
   }
 
   function retornar() {
-    navigate("/produtos");
+    navigate("/home");
   }
 
   async function GerarNovoProduto(e: ChangeEvent<HTMLFormElement>) {
@@ -122,9 +122,8 @@ function FormularioProduto() {
             Authorization: token,
           },
         });
-
-        //toastAlerta("Postagem cadastrada com sucesso", "sucesso");
         retornar();
+        //toastAlerta("Postagem cadastrada com sucesso", "sucesso");
       } catch (error: any) {
         if (error.toString().includes("403")) {
           //toastAlerta("O token expirou, favor logar novamente", "info");
@@ -169,6 +168,55 @@ function FormularioProduto() {
             className="border-2 border-slate-700 rounded p-2"
           />
         </div>
+
+        <div className="flex flex-col w-full">
+          <label htmlFor="foto">Foto</label>
+          <input
+            type="text"
+            id="foto"
+            name="foto"
+            placeholder="Foto"
+            className="border-2 border-slate-700 rounded p-2"
+            value={produto.foto}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+          />
+        </div>
+        <div className="flex flex-col gap-2">
+          <label htmlFor="quantidade">Quantidade</label>
+          <input
+            value={produto.quantidade}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+            type="text"
+            placeholder="Quantidade"
+            name="quantidade"
+            required
+            className="border-2 border-slate-700 rounded p-2"
+          />
+        </div>
+        <div className="flex flex-col gap-2">
+          <label htmlFor="preco">Preço</label>
+          <input
+            value={produto.preco}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+            type="text"
+            placeholder="Preço"
+            name="preco"
+            required
+            className="border-2 border-slate-700 rounded p-2"
+          />
+        </div>
+        <div className="flex flex-col gap-2">
+          <label htmlFor="validade">Validade</label>
+          <input
+            value={produto.validade}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+            type="date"
+            placeholder=""
+            name="validade"
+            required
+            className="border-2 border-slate-700 rounded p-2"
+          />
+        </div>
         <div className="flex flex-col gap-2">
           <p>Categoria do produto</p>
           <select
@@ -182,7 +230,7 @@ function FormularioProduto() {
             </option>
             {categorias.map((categoria) => (
               <>
-                <option value={categoria.id}>{categoria.descricao}</option>
+                <option value={categoria.id}>{categoria.nome}</option>
               </>
             ))}
           </select>
