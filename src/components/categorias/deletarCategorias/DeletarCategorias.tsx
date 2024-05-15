@@ -55,9 +55,9 @@ function DeletarCategoria() {
         },
       });
 
-      toastAlerta('Tema apagado com sucesso', 'sucesso')
+      toastAlerta('Categoria apagada com sucesso!', 'sucesso')
     } catch (error) {
-      toastAlerta('Erro ao apagar o Tema', 'erro')
+      toastAlerta('Erro ao apagar a categoria', 'erro')
     }
 
     retornar();
