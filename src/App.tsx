@@ -11,21 +11,23 @@ import Login1 from "./pages/login/Login1";
 import ListarProdutos from "./components/produtos/listarProdutos/ListarProdutos";
 import FormularioProduto from "./components/produtos/formularioProdutos/FormularioProduto";
 import DeletarProduto from "./components/produtos/deletarProduto/DeletarProduto";
+import Navbar from "./components/navbar/NavBar";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
     <>
       <AuthProvider>
         <BrowserRouter>
+          <Navbar />
           <div className="min-h-[80vh]">
             <Routes>
-              <Route path="/" element={<Login />} />
+              <Route path="/" element={<Login1 />} />
               <Route path="/home" element={<Home />} />
-              <Route path="/login" element={<Login />} />
+              <Route path="/login" element={<Login1 />} />
               <Route path="/cadastro" element={<Cadastro />} />
               <Route path="/aboutus" element={<AboutUs />} />
               <Route path="/categorias" element={<ListarCategorias />} />
-              <Route path="/login1" element={<Login1 />} />
               <Route
                 path="/cadastroCategoria"
                 element={<FormularioCategoria />}
@@ -47,6 +49,7 @@ function App() {
               <Route path="/deletarProduto/:id" element={<DeletarProduto />} />
             </Routes>
           </div>
+          <Footer />
         </BrowserRouter>
       </AuthProvider>
     </>

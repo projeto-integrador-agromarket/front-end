@@ -6,16 +6,13 @@ import Footer from "../../components/footer/Footer";
 function Home() {
   return (
     <>
-    <Navbar />
-    <Carrossel/>
+      <Carrossel />
       <div className="bg-red-400 flex justify-center ">
         <div className="container text-white ">
-          <div className="flex flex-col gap-4 items-center justify-center py-64">
-          </div>
+          <div className="flex flex-col gap-4 items-center justify-center py-64"></div>
           <div className="flex justify-center "></div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }
