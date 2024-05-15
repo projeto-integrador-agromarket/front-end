@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import logo from "../../assets/logoEditado.png";
-import { ShoppingCart } from "@phosphor-icons/react";
+import logo from "../src/assets/logoEditado.png";
+import {ShoppingCart} from "@phosphor-icons/react";
 
 function Navbar() {
   return (
@@ -9,7 +9,7 @@ function Navbar() {
       <div className="w-full bg-meddium-orange text-white-new flex justify-center py-4 items-center gap-4">
         <div className="container flex justify-between text-lg items-center">
           <div className="text-2xl font-bold uppercase flex items-center">
-            {/*<img src={logo} className="h-20 w-15" />*/}
+            {<img src={logo} className="h-20 w-15" />}
             <h1>Nosso Pomar</h1>
           </div>
           {/* <!--Barra de pesquisa--> */}
@@ -20,8 +20,7 @@ function Navbar() {
                 className="relative m-0 block flex-auto rounded-l border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
                 placeholder="Busque produtos aqui"
                 aria-label="Search"
-                aria-describedby="button-addon2"
-              />
+                aria-describedby="button-addon2"/>
 
               {/* <!--Pesquisar icon--> */}
               <span
@@ -51,9 +50,6 @@ function Navbar() {
             <Link to="/categorias" className="hover:text-light-orange">
               Categorias
             </Link>
-            <Link to="/cadastroCategoria" className="hover:text-light-orange">
-              Cadastrar Categorias
-            </Link>
             <div className="hover:text-light-orange">Produtos</div>
             <div className="hover:text-light-orange">Sair</div>
           </div>
@@ -65,19 +61,25 @@ function Navbar() {
       <div className="w-full bg-light-orange text-white-new flex justify-center py-1">
         <div className="container flex justify-between text-lg items-left flex-row-reverse">
           <div className="flex gap-4">
-            <Link to="/" className="hover:text-light-orange">
+            <Link to="/" className="hover:underline">
               Login
             </Link>
+            <p>|</p>
             <Link to="/cadastro" className="hover:underline">
               Cadastre-se
             </Link>
-            <Link to="/cart" className="hover:underline">
-              <ShoppingCart size={29} />
+            <p>|</p>
+            <Link to="/login" className="hover:underline">
+            <div className="flex gap-2">
+            <ShoppingCart size={29} />
+        
+        </div>
             </Link>
           </div>
         </div>
       </div>
       {/* <!--FIM SEGUNDO MENU--> */}
+
     </>
   );
 }
