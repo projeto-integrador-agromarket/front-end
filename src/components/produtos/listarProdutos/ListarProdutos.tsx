@@ -1,11 +1,13 @@
 import React, { useContext, useEffect, useState } from "react";
-import { DNA } from "react-loader-spinner";
+import { Dna } from "react-loader-spinner";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../contexts/AuthContext";
 import Produto from "../../../models/Produto";
 import { buscar } from "../../../services/Service";
 import CardProduto from "../cardProdutos/CardProduto";
 import ModalProduto from "../modalProduto/ModalProduto";
+import Footer from "../../footer/Footer";
+import NavBar from "../../navbar/NavBar";
 //import { toastAlerta } from "../../../utils/toastAlerta";
 
 function ListarProdutos() {
@@ -44,11 +46,15 @@ function ListarProdutos() {
 
   return (
     <>
+    <NavBar/>
+    <div className="w-full h-40">
+
+    </div>
       <div className="flex justify-around gap-4">
         <ModalProduto />
       </div>
       {produtos.length === 0 && (
-        <DNA
+        <Dna
           visible={true}
           height="200"
           width="200"
@@ -62,6 +68,8 @@ function ListarProdutos() {
           <CardProduto key={produto.id} produto={produto} />
         ))}
       </div>
+
+      <Footer/>
     </>
   );
 }

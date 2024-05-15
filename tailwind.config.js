@@ -21,11 +21,13 @@ module.exports = {
       'brown': '#694A38',
       'mint-cream': '#E5ECE9',
       'battleship-gray': '#969A97',
+      'dark-gray': '#85878c',
       'timber-wolf': '#D6D1CD',
       'dark-blue-footer': '#1F2937',
       'light-gray-footer': '#E5E7EB',
       'meddium-gray-footer': '#6b7280',
-      'dark-gray-footer': '#111827'
+      'dark-gray-footer': '#111827',
+      'light-gray-card':'#e5e7eb'
     },
   },
   plugins: [],

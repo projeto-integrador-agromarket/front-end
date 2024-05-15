@@ -4,7 +4,7 @@ import Logo from "../../assets/logoEditado.png";
 function Footer1() {
   return (
     <>
-        <div className="pb-0 p-10 bg-dark-blue-footer text-light-gray-footer">
+        <div className="pb-0 p-10 bg-dark-blue-footer text-light-gray-footer mt-10">
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
                     <div className="mb-5">

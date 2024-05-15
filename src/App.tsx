@@ -7,10 +7,12 @@ import { AuthProvider } from "./contexts/AuthContext";
 import ListarCategorias from "./components/categorias/listarCategorias/ListarCategoria";
 import FormularioCategoria from "./components/categorias/formularioCategorias/FormularioCategoria";
 import DeletarCategoria from "./components/categorias/deletarCategorias/DeletarCategorias";
-import Login1 from "./pages/login/Login1";
 import ListarProdutos from "./components/produtos/listarProdutos/ListarProdutos";
 import FormularioProduto from "./components/produtos/formularioProdutos/FormularioProduto";
 import DeletarProduto from "./components/produtos/deletarProduto/DeletarProduto";
+import CardProduto1 from "./components/produtos/cardProdutos/CardProduto1";
+import ExibirProduto from "./components/produtos/exibirProduto/ExibirProduto";
+import ModalExibirProduto from "./components/produtos/exibirProduto/ModalExibirProduto";
 
 function App() {
   return (
@@ -25,7 +27,7 @@ function App() {
               <Route path="/cadastro" element={<Cadastro />} />
               <Route path="/aboutus" element={<AboutUs />} />
               <Route path="/categorias" element={<ListarCategorias />} />
-              <Route path="/login1" element={<Login1 />} />
+              <Route path="/login1" element={<Login />} />
               <Route
                 path="/cadastroCategoria"
                 element={<FormularioCategoria />}
@@ -39,12 +41,14 @@ function App() {
                 element={<DeletarCategoria />}
               />
               <Route path="/produtos" element={<ListarProdutos />} />
+              <Route path="/teste" element={<CardProduto1 />} />
               <Route path="/cadastroProduto" element={<FormularioProduto />} />
               <Route
                 path="/editarProduto/:id"
                 element={<FormularioProduto />}
               />
               <Route path="/deletarProduto/:id" element={<DeletarProduto />} />
+              <Route path="/exibirProduto" element={<ModalExibirProduto />} />
             </Routes>
           </div>
         </BrowserRouter>
