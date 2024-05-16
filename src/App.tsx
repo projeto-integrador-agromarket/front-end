@@ -11,6 +11,7 @@ import Login1 from "./pages/login/Login1";
 import ListarProdutos from "./components/produtos/listarProdutos/ListarProdutos";
 import FormularioProduto from "./components/produtos/formularioProdutos/FormularioProduto";
 import DeletarProduto from "./components/produtos/deletarProduto/DeletarProduto";
+import Cart from './pages/Cart/Carrinho'
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
                 element={<FormularioProduto />}
               />
               <Route path="/deletarProduto/:id" element={<DeletarProduto />} />
+              <Route path="/cart" element={<Cart />} />
             </Routes>
           </div>
         </BrowserRouter>

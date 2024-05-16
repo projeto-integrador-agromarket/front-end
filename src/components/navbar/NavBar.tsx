@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/logoEditado.png";
 import { ShoppingCart } from "@phosphor-icons/react";
+import { AuthContext } from "../../contexts/AuthContext";
+import { useContext } from "react";
+
 
 function Navbar() {
+  const { quantidadeItems } = useContext(AuthContext)
   return (
     <>
       {/* <!--PRIMEIRO MENU--> */}
@@ -74,8 +78,14 @@ function Navbar() {
               Cadastre-se
             </Link>
             <Link to="/cart" className="hover:underline">
-              <ShoppingCart size={29} />
-            </Link>
+              <div className="text-base flex items-center	justify-center pb-1 pr-1 pb-1 pl-1 cursor-pointer	relative	ml-20">
+              <ShoppingCart size={30} />
+              <div className="bg-red pr-1.5 pl-1.5 w-15 h-15 absolute top-4 left-7 font-semibold text-xs	 rounded-full flex items-center	">
+              {quantidadeItems}
+              </div>
+              </div>
+              
+             </Link>
           </div>
         </div>
       </div>

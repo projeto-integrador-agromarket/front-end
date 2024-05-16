@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { AuthContext } from "../../../contexts/AuthContext";
 import Categoria from "../../../models/Categoria";
 import { atualizar, buscar, cadastrar } from "../../../services/Service";
-//import { toastAlerta } from "../../../utils/toastAlerta";
+import { toastAlerta } from "../../../util/toastAlerta";
 
 function FormularioCategoria() {
   const [categoria, setCategoria] = useState<Categoria>({} as Categoria);
@@ -49,14 +49,14 @@ function FormularioCategoria() {
           },
         });
 
-        //toastAlerta("Tema atualizado com sucesso", "sucesso");
+        toastAlerta("Tema atualizado com sucesso", "sucesso");
         retornar();
       } catch (error: any) {
         if (error.toString().includes("403")) {
-          //toastAlerta("O token expirou, favor logar novamente", "info");
+          toastAlerta("O token expirou, favor logar novamente", "info");
           handleLogout();
         } else {
-          //toastAlerta("Erro ao atualizar o Tema", "erro");
+          toastAlerta("Erro ao atualizar o Tema", "erro");
         }
       }
     } else {
@@ -67,13 +67,13 @@ function FormularioCategoria() {
           },
         });
 
-        //toastAlerta("Tema cadastrado com sucesso", "sucesso");
+        toastAlerta("Tema cadastrado com sucesso", "sucesso");
       } catch (error: any) {
         if (error.toString().includes("403")) {
-          //toastAlerta("O token expirou, favor logar novamente", "info");
+          toastAlerta("O token expirou, favor logar novamente", "info");
           handleLogout();
         } else {
-          //toastAlerta("Erro ao cadastrado o Tema", "erro");
+          toastAlerta("Erro ao cadastrado o Tema", "erro");
         }
       }
     }
@@ -87,7 +87,7 @@ function FormularioCategoria() {
 
   useEffect(() => {
     if (token === "") {
-      //toastAlerta("Você precisa estar logado", "info");
+      toastAlerta("Você precisa estar logado", "info");
       navigate("/login");
     }
   }, [token]);
