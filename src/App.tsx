@@ -9,6 +9,9 @@ import DeletarCategoria from "./components/categorias/deletarCategorias/DeletarC
 import ListarProdutos from "./components/produtos/listarProdutos/ListarProdutos";
 import FormularioProduto from "./components/produtos/formularioProdutos/FormularioProduto";
 import DeletarProduto from "./components/produtos/deletarProduto/DeletarProduto";
+import Cart from "./pages/Cart/Carrinho";
+import Navbar from "./components/navbar/NavBar";
+import Footer from "./components/footer/Footer";
 import CardProduto1 from "./components/produtos/cardProdutos/CardProduto1";
 import ExibirProduto from "./components/produtos/exibirProduto/ExibirProduto";
 import ModalExibirProduto from "./components/produtos/exibirProduto/ModalExibirProduto";
@@ -19,11 +22,12 @@ function App() {
     <>
       <AuthProvider>
         <BrowserRouter>
+          <Navbar />
           <div className="min-h-[80vh]">
             <Routes>
-              <Route path="/" element={<Login />} />
+              <Route path="/" element={<Home />} />
               <Route path="/home" element={<Home />} />
-              <Route path="/login" element={<Login />} />
+              <Route path="/login" element={<Login1 />} />
               <Route path="/cadastro" element={<Cadastro />} />
               <Route path="/contato" element={<Contato />} />
               <Route path="/categorias" element={<ListarCategorias />} />
@@ -47,9 +51,12 @@ function App() {
                 element={<FormularioProduto />}
               />
               <Route path="/deletarProduto/:id" element={<DeletarProduto />} />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="/sobre" element={<AboutUs />} />
               <Route path="/exibirProduto/:id" element={<ModalExibirProduto />} />
             </Routes>
           </div>
+          <Footer />
         </BrowserRouter>
       </AuthProvider>
     </>

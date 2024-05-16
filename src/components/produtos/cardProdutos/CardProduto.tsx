@@ -1,10 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Produto from "../../../models/Produto";
+import { AuthContext } from "../../../contexts/AuthContext";
+import { useContext } from "react";
+import { MdAddShoppingCart } from "react-icons/md";
+import { toastAlerta } from "../../../util/toastAlerta";
+
 
 interface CardProdutoProps {
   produto: Produto;
 }
+
 
 /*export default interface Produto {
   id: number;
@@ -18,6 +24,9 @@ interface CardProdutoProps {
 } */
 
 function CardProduto({ produto }: CardProdutoProps) {
+
+  const { adicionarProduto, removerProduto } = useContext(AuthContext)
+
   return (
     <div className="border-slate-900 border flex flex-col rounded overflow-hidden justify-between">
       <div>
@@ -61,8 +70,17 @@ function CardProduto({ produto }: CardProdutoProps) {
           className="text-white bg-red-400 hover:bg-red-700 w-full flex items-center justify-center"
         >
           <button>Deletar</button>
+         
         </Link>
-      </div>
+
+                <button className="bg-new-green hover:bg-new-dark-green text-white font-semibold py-2 px-4 rounded mr-5 mb-1"
+                    onClick={() => adicionarProduto(produto)}><MdAddShoppingCart size={28}/></button>
+                
+
+                <button className="bg-red hover:bg-dark-red text-white-new font-semibold py-2 px-4 rounded mr-2 mb-1"
+                    onClick={() => removerProduto(produto.id)}>Remover</button>
+            </div>
+        
     </div>
   );
 }

@@ -1,8 +1,24 @@
-.fundoCadastro {
-    background-image: url(../../assets/fundo-cadastro.jpg);
-    background-repeat: no-repeat;
-    width: 100%;
-    min-height: 100vh;
-    background-size: cover;
-    background-position: center;
-  }
+/*.fundoCadastro {
+  background-image: url(../../assets/fundo-cadastro.jpg);
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+}*/
+
+.fundo {
+  /* background-image: linear-gradient(115deg, #a2cd6d, #C9E1AB); */
+  /* background-image: linear-gradient(115deg, #9F7AEA, #FEE2FE); */
+  /*background-image: linear-gradient(360deg, #969A97, #6b7280);*/
+  /* background-image: linear-gradient(250deg, #BB7454, #e2a183); */
+  /* background-image: linear-gradient(250deg, #facbb5, #facbb5); */
+  background-image: url(../../assets/background-login1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.imagem-login {
+  background-image: url(../../assets/fundo-cadastro.jpg);
+}

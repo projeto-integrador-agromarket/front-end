@@ -1,11 +1,13 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Dna } from "react-loader-spinner";
+import { Dna } from "react-loader-spinner";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../contexts/AuthContext";
 import Produto from "../../../models/Produto";
 import { buscar } from "../../../services/Service";
 import CardProduto from "../cardProdutos/CardProduto1";
 import ModalProduto from "../modalProduto/ModalProduto";
+import { toastAlerta } from "../../../util/toastAlerta";
 import Footer from "../../footer/Footer";
 import NavBar from "../../navbar/NavBar";
 //import { toastAlerta } from "../../../utils/toastAlerta";
@@ -20,7 +22,7 @@ function ListarProdutos() {
 
   useEffect(() => {
     if (token === "") {
-      //toastAlerta("Você precisa estar logado", "info");
+      toastAlerta("Você precisa estar logado", "info");
       navigate("/");
     }
   }, [token]);
@@ -34,7 +36,7 @@ function ListarProdutos() {
       });
     } catch (error: any) {
       if (error.toString().includes("403")) {
-        //toastAlerta("O token expirou, favor logar novamente", "info");
+        toastAlerta("O token expirou, favor logar novamente", "info");
         handleLogout();
       }
     }
@@ -59,6 +61,7 @@ function ListarProdutos() {
         </div>
       </div>
       {produtos.length === 0 && (
+        <Dna
         <Dna
           visible={true}
           height="200"

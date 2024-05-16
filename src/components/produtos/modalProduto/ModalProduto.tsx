@@ -1,28 +1,39 @@
-import React from "react";
+import React, { useContext } from "react";
 import FormularioProduto from "../formularioProdutos/FormularioProduto";
-
+import Popup from 'reactjs-popup';
 import "reactjs-popup/dist/index.css";
-import Popup from "reactjs-popup";
+
 
 import "./ModalProduto.css";
+import { AuthContext } from "../../../contexts/AuthContext";
 
 function ModalProduto() {
-  return (
-    <>
-      <Popup
-        trigger={
-          <button className="rounded px-6 py-3 text-white-new">
-            Novo Produto
-          </button>
-        }
-        modal
-      >
-        <div>
-          <FormularioProduto />
-        </div>
-      </Popup>
-    </>
-  );
+  const { usuario } = useContext(AuthContext);
+
+  let modalProdutoComponent;
+
+  if (usuario.token !== "" && usuario.tipo === "cliente") {
+    modalProdutoComponent = <></>;
+  } else if (usuario.token !== "" && usuario.tipo === "vendedor") {
+    modalProdutoComponent = (
+      <>
+        <Popup
+          trigger={
+            <button className="border rounded px-4 hover:bg-white hover:text-indigo-800">
+              Novo Produto
+            </button>
+          }
+          modal
+        >
+          <div>
+            <FormularioProduto />
+          </div>
+        </Popup>
+      </>
+    );
+  }
+
+  return <>{modalProdutoComponent}</>;
 }
 
 export default ModalProduto;
