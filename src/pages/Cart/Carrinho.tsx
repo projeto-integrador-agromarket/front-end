@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
 import CardProduto from "../../components/produtos/cardProdutos/CardProduto";
 import Navbar from "../../components/navbar/NavBar";
+import NavBar from "../../components/navbar/NavBar";
+import Footer from "../../components/footer/Footer";
 
 function Carrinho() {
   const { items, limparCart } = useContext(AuthContext);
@@ -12,6 +14,7 @@ function Carrinho() {
 
   return (
     <>
+    <NavBar />
       <div className="rounded p-5 text-white-new bg-new-light-orange m-5 w-min-0 h-full justify-center flex align-center text-lg font-bold">
         MEU CARRINHO:
       </div>
@@ -40,6 +43,7 @@ function Carrinho() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

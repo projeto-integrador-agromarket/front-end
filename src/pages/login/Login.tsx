@@ -6,7 +6,7 @@ import { AuthContext } from '../../contexts/AuthContext';
 import UsuarioLogin from '../../models/UsuarioLogin';
 import { RotatingLines } from 'react-loader-spinner';
 
-function Login1() {
+function Login() {
     let navigate = useNavigate();
 
     const [usuarioLogin, setUsuarioLogin] = useState<UsuarioLogin>(
@@ -102,4 +102,4 @@ function Login1() {
     )
 }
 
-export default Login1
+export default Login

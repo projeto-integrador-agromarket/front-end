@@ -16,18 +16,18 @@ import CardProduto1 from "./components/produtos/cardProdutos/CardProduto1";
 import ExibirProduto from "./components/produtos/exibirProduto/ExibirProduto";
 import ModalExibirProduto from "./components/produtos/exibirProduto/ModalExibirProduto";
 import Contato from "./pages/contato/Contato";
+import AboutUs from "./pages/aboutus/AboutUs";
 
 function App() {
   return (
     <>
       <AuthProvider>
         <BrowserRouter>
-          <Navbar />
           <div className="min-h-[80vh]">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/home" element={<Home />} />
-              <Route path="/login" element={<Login1 />} />
+              <Route path="/login" element={<Login />} />
               <Route path="/cadastro" element={<Cadastro />} />
               <Route path="/contato" element={<Contato />} />
               <Route path="/categorias" element={<ListarCategorias />} />
@@ -56,7 +56,6 @@ function App() {
               <Route path="/exibirProduto/:id" element={<ModalExibirProduto />} />
             </Routes>
           </div>
-          <Footer />
         </BrowserRouter>
       </AuthProvider>
     </>

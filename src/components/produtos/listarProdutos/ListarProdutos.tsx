@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Dna } from "react-loader-spinner";
-import { Dna } from "react-loader-spinner";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../contexts/AuthContext";
 import Produto from "../../../models/Produto";
@@ -61,7 +60,6 @@ function ListarProdutos() {
         </div>
       </div>
       {produtos.length === 0 && (
-        <Dna
         <Dna
           visible={true}
           height="200"

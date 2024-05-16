@@ -1,8 +1,11 @@
+import Footer from "../../components/footer/Footer";
+import NavBar from "../../components/navbar/NavBar";
 import "./AboutUs.css";
 
 export function AboutUs() {
   return (
     <>
+    <NavBar />
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="max-w-xs bg-white rounded-lg overflow-hidden shadow-lg">
           <div className="primeiroCard bg-cover h-48 flex-none bg-cover rounded-t text-center overflow-hidden"></div>
@@ -46,6 +49,7 @@ export function AboutUs() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

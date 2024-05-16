@@ -34,9 +34,9 @@ module.exports = {
       'red': '#DD1C1A',
       'dark-red': '#B71815',
       'new-green': '#99BC38',
-      'new-dark-green': '#809D2F'
+      'new-dark-green': '#809D2F',
       'dark-gray-footer': '#111827',
-      'light-gray-card':'#e5e7eb'
+      'light-gray-card':'#e5e7eb',
     },
   },
   plugins: [],
