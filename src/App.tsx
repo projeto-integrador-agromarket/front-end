@@ -22,7 +22,7 @@ function App() {
           <Navbar />
           <div className="min-h-[80vh]">
             <Routes>
-              <Route path="/" element={<Login1 />} />
+              <Route path="/" element={<Home />} />
               <Route path="/home" element={<Home />} />
               <Route path="/login" element={<Login1 />} />
               <Route path="/cadastro" element={<Cadastro />} />
@@ -47,6 +47,7 @@ function App() {
                 element={<FormularioProduto />}
               />
               <Route path="/deletarProduto/:id" element={<DeletarProduto />} />
+              <Route path="/sobre" element={<AboutUs />} />
             </Routes>
           </div>
           <Footer />

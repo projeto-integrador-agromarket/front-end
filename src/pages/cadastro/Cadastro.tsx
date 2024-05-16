@@ -14,7 +14,7 @@ function Cadastro() {
     nome: "",
     email: "",
     foto: "",
-    tipo: "Free",
+    tipo: "",
     senha: "",
   });
 
@@ -23,7 +23,7 @@ function Cadastro() {
     nome: "",
     email: "",
     foto: "",
-    tipo: "Free",
+    tipo: "",
     senha: "",
   });
 
@@ -39,6 +39,11 @@ function Cadastro() {
 
   function handleConfirmarSenha(e: ChangeEvent<HTMLInputElement>) {
     setConfirmaSenha(e.target.value);
+  }
+
+  function handleEscolherTipo(e: ChangeEvent<HTMLSelectElement>) {
+    const value = (e.target as HTMLSelectElement).value;
+    setUsuario({ ...usuario, tipo: value });
   }
 
   function atualizarEstado(e: ChangeEvent<HTMLInputElement>) {
@@ -254,6 +259,14 @@ function Cadastro() {
                       handleConfirmarSenha(e)
                     }
                   />
+                </div>
+                <div className="flex flex-col w-full">
+                  <label htmlFor="EscolherTipo">Escolha o tipo: </label>
+                  <select value={usuario.tipo} onChange={handleEscolherTipo}>
+                    <option value="">Selecione...</option>
+                    <option value="cliente">Cliente</option>
+                    <option value="vendedor">Vendedor</option>
+                  </select>
                 </div>
                 <div className="flex justify-around w-full gap-8">
                   <button
