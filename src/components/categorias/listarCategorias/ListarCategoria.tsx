@@ -41,7 +41,7 @@ function ListarCategorias() {
   return (
     <>
       {categorias.length === 0 && (
-        <DNA
+        <Dna
           visible={true}
           height="200"
           width="200"
