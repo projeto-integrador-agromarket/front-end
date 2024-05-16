@@ -1,0 +1,56 @@
+.swiper-produtos {
+    width: 80%;
+    height: 80vh;
+}
+
+.swiper-produtos {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    background-color: rgba(255, 255, 255, 1);
+    padding: 5.2vh; 
+    /*border-radius: 999px; */
+    box-shadow: 5px 5px 5px rgba(0,0,0, 0.3);
+}
+
+.swiper-produtos swiper-button-next::after, .swiper-produtos swiper-button-prev::after {
+    color: #F35B04;
+    font-size: 2rem;
+}
+
+.swiper-button-next {
+    right: 0;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    padding-left: 15px;
+}
+
+.swiper-button-prev {
+    left: 0;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    padding-right: 20px;
+}
+
+.swiper-button-next::after {
+    padding-left: 15px;
+}
+
+.swiper-button-prev::after {
+    padding-right: 20px;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover{
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 5px 6px 6px rgba(0,0,0, 0.5);
+}
+
+.swiper-pagination-bullet {
+    background-color: white;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #F35B04;
+}

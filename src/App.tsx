@@ -1,7 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
-import AboutUs from "./pages/aboutus/AboutUs";
 import Cadastro from "./pages/cadastro/Cadastro";
 import { AuthProvider } from "./contexts/AuthContext";
 import ListarCategorias from "./components/categorias/listarCategorias/ListarCategoria";
@@ -13,6 +12,7 @@ import DeletarProduto from "./components/produtos/deletarProduto/DeletarProduto"
 import CardProduto1 from "./components/produtos/cardProdutos/CardProduto1";
 import ExibirProduto from "./components/produtos/exibirProduto/ExibirProduto";
 import ModalExibirProduto from "./components/produtos/exibirProduto/ModalExibirProduto";
+import Contato from "./pages/contato/Contato";
 
 function App() {
   return (
@@ -25,7 +25,7 @@ function App() {
               <Route path="/home" element={<Home />} />
               <Route path="/login" element={<Login />} />
               <Route path="/cadastro" element={<Cadastro />} />
-              <Route path="/aboutus" element={<AboutUs />} />
+              <Route path="/contato" element={<Contato />} />
               <Route path="/categorias" element={<ListarCategorias />} />
               <Route path="/login1" element={<Login />} />
               <Route
@@ -41,14 +41,13 @@ function App() {
                 element={<DeletarCategoria />}
               />
               <Route path="/produtos" element={<ListarProdutos />} />
-              <Route path="/teste" element={<CardProduto1 />} />
               <Route path="/cadastroProduto" element={<FormularioProduto />} />
               <Route
                 path="/editarProduto/:id"
                 element={<FormularioProduto />}
               />
               <Route path="/deletarProduto/:id" element={<DeletarProduto />} />
-              <Route path="/exibirProduto" element={<ModalExibirProduto />} />
+              <Route path="/exibirProduto/:id" element={<ModalExibirProduto />} />
             </Routes>
           </div>
         </BrowserRouter>

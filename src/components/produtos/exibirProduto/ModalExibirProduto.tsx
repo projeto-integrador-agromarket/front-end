@@ -1,9 +1,16 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Popup from 'reactjs-popup'
 import ExibirProduto from './ExibirProduto'
 import './ModalExibirProduto.css';
+import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../../contexts/AuthContext';
+import Produto from '../../../models/Produto';
+import { buscar } from '../../../services/Service';
+import { Dna } from 'react-loader-spinner';
+import CardProduto from '../cardProdutos/CardProduto';
 
 function ModalExibirProduto() {
+  
   return (
     <>
     <Popup
@@ -14,7 +21,8 @@ function ModalExibirProduto() {
       }
       modal
     >
-    <ExibirProduto />
+      <p>Olá</p>
+      {/* <ExibirProduto produto={undefined} /> */}
     </Popup>
   </>
   )

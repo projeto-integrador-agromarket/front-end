@@ -1,17 +1,15 @@
-import { Link } from "react-router-dom"
-import Produto from "../../../models/Produto";
-import Popup from "reactjs-popup";
-
+import React from 'react'
+import Popup from 'reactjs-popup';
+import Produto from '../../../models/Produto';
 interface CardProdutoProps {
     produto: Produto;
 }
 
-function CardProduto1(this: any, { produto }: CardProdutoProps) {
-
+function CardProdutoHome(this: any, { produto }: CardProdutoProps) {
     return (
         <>
-            <div className="relative m-10 flex w-full max-w-sm flex-col overflow-hidden rounded-lg border border-light-gray-card bg-white-new shadow-2xl hover:bg-light-gray-card">
-                <a className="relative mx-3 mt-3 flex self-center h-60 overflow-hidden rounded-xl" href="#">
+            <div className="my-10 h-28 flex w-28 max-w-sm flex-col overflow-hidden rounded-lg border border-light-gray-card bg-white-new hover:bg-light-gray-card">
+                <a className=" mx-0 my-2 flex self-center h-full overflow-hidden rounded-xl" href="#">
                     <img className="object-cover" src={produto.foto} alt="product image" />
                     {/* <span className="absolute top-0 left-0 m-2 rounded-full bg-black px-2 text-center text-sm font-medium text-white">39% OFF</span> */}
                 </a>
@@ -117,4 +115,4 @@ function CardProduto1(this: any, { produto }: CardProdutoProps) {
     )
 }
 
-export default CardProduto1
+export default CardProdutoHome

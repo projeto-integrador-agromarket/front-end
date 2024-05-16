@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../contexts/AuthContext";
 import Produto from "../../../models/Produto";
 import { buscar } from "../../../services/Service";
-import CardProduto from "../cardProdutos/CardProduto";
+import CardProduto from "../cardProdutos/CardProduto1";
 import ModalProduto from "../modalProduto/ModalProduto";
 import Footer from "../../footer/Footer";
 import NavBar from "../../navbar/NavBar";
@@ -46,12 +46,17 @@ function ListarProdutos() {
 
   return (
     <>
-    <NavBar/>
-    <div className="w-full h-40">
-
-    </div>
-      <div className="flex justify-around gap-4">
-        <ModalProduto />
+      <NavBar />
+      <div className="flex self-center justify-center my-16 font-semibold text-6xl w-full text-dark-orange">
+        <p>Produtos</p>
+      </div>
+      <div className="flex flex-col w-full p-5 justify-center items-center bg-timber-wolf">
+        <div>
+          <p className="self-center justify-center font-semibold text-2xl text-black-new">Você é vendedor? Cadastre um produto agora mesmo</p>
+        </div>
+        <div className="mt-4 bg-meddium-green text-xl shadow-xl hover:bg-dark-green-login">
+          <ModalProduto />
+        </div>
       </div>
       {produtos.length === 0 && (
         <Dna
@@ -69,7 +74,7 @@ function ListarProdutos() {
         ))}
       </div>
 
-      <Footer/>
+      <Footer />
     </>
   );
 }

@@ -39,7 +39,7 @@ function Login1() {
             <div className="container mx-auto">
                 <div className="flex flex-col lg:flex-row w-10/12 lg:w-11/12 bg-white-new rounded-xl mx-auto shadow-lg overflow-hidden">
                     <div className="imagem-login w-full lg:w-1/2 flex flex-col items-center justify-center pt-72 p-12 bg-no-repeat bg-cover bg-center">
-                        <h1 className="text-white-new text-4xl font-semibold mb-3 bg-meddium-orange p-2 rounded-sm shadow-sm">  Bem vindo!  </h1>
+                        <h1 className="text-white-new text-4xl font-semibold mb-3 bg-meddium-orange py-2 px-20 rounded-sm shadow-sm">  Bem vindo!  </h1>
                     </div>
                     <div className="w-full lg:w-1/2 pb-12 py-24 px-12 flex flex-col">
                         <h2 className="text-4xl mb-2">Entrar</h2>
@@ -93,7 +93,7 @@ function Login1() {
                             Ainda não tem uma conta? <Link to="/cadastro" className="text-dark-orange hover:underline">Cadastre-se</Link>
                         </p>
                         <div className="mt-8 self-center">
-                            <img src={Logo} className="h-28 p-0" />
+                        <Link to="/home"><img src={Logo} className="h-28 p-0" /></Link>
                         </div>
                     </div>
                 </div>
