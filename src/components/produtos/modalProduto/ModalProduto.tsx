@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import FormularioProduto from "../formularioProdutos/FormularioProduto";
-
+import Popup from 'reactjs-popup';
 import "reactjs-popup/dist/index.css";
-import Popup from "reactjs-popup";
+
 
 import "./ModalProduto.css";
 import { AuthContext } from "../../../contexts/AuthContext";

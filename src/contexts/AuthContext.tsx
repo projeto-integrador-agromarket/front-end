@@ -3,6 +3,7 @@ import { createContext, ReactNode, useState } from "react";
 import UsuarioLogin from "../models/UsuarioLogin";
 import { login } from "../services/Service";
 import Produto from "../models/Produto";
+import { toastAlerta } from "../util/toastAlerta";
 
 interface AuthContextProps {
   usuario: UsuarioLogin;
@@ -32,6 +33,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
  // Função p/ adicionar produto ao carrinho
  function adicionarProduto(produto: Produto) {
      setItems(state => [...state, produto])
+     alert('Produto adicionado ao carrinho!')
  }
 
 //remove produtos do carrinho
@@ -45,6 +47,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
      if(indice >= 0){
          novoCart.splice(indice, 1)
          setItems(novoCart)  // Atualiza o Carrinho
+         alert('Produto removido do carrinho!')
      }
  }
 
@@ -58,6 +61,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
     nome: "",
     email: "",
     senha: "",
+    tipo: "",
     foto: "",
     token: "",
   });
@@ -83,6 +87,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
       nome: "",
       email: "",
       senha: "",
+      tipo: "",
       foto: "",
       token: "",
     });
@@ -96,3 +101,4 @@ export function AuthProvider({ children }: AuthProviderProps) {
     </AuthContext.Provider>
   );
 }
+
