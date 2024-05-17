@@ -41,7 +41,7 @@ function Login1() {
           <div className="imagem-login w-full lg:w-1/2 flex flex-col items-center justify-center pt-72 p-12 bg-no-repeat bg-cover bg-center ">
             <h1 className="text-white-new text-4xl font-semibold mb-3 bg-meddium-orange p-2 rounded-sm shadow-sm">
               {" "}
-              Bem vindo!{" "}
+              Bem vindo!!{" "}
             </h1>
           </div>
           <div className="w-full lg:w-1/2 pb-12 py-24 px-12 flex flex-col">
