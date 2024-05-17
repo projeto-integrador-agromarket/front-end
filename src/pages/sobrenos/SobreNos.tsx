@@ -1,13 +1,13 @@
 import Footer from "../../components/footer/Footer";
 import NavBar from "../../components/navbar/NavBar";
-import "./AboutUs.css";
+import "./SobreNos.css";
 
-export function AboutUs() {
+function SobreNos() {
   return (
     <>
-    <NavBar />
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="max-w-xs bg-white rounded-lg overflow-hidden shadow-lg">
+      <NavBar />
+      <div className="flex justify-between">
+        <div className="max-w-xs bg-white rounded-lg overflow-hidden shadow-lg p-4">
           <div className="primeiroCard bg-cover h-48 flex-none bg-cover rounded-t text-center overflow-hidden"></div>
           <div className="px-6 py-4">
             <div className="font-bold text-xl mb-2">Missão</div>
@@ -21,7 +21,7 @@ export function AboutUs() {
           </div>
         </div>
 
-        <div className="max-w-xs bg-white rounded-lg overflow-hidden shadow-lg">
+        <div className="max-w-xs bg-white rounded-lg overflow-hidden shadow-lg p-4">
           <div className="segundoCard bg-cover h-48 flex-none bg-cover rounded-t text-center overflow-hidden"></div>
           <div className="px-6 py-4">
             <div className="font-bold text-xl mb-2">Visão</div>
@@ -35,7 +35,7 @@ export function AboutUs() {
           </div>
         </div>
 
-        <div className="max-w-xs bg-white rounded-lg overflow-hidden shadow-lg">
+        <div className="max-w-xs bg-white rounded-lg overflow-hidden shadow-lg p-4">
           <div className="terceiroCard bg-cover h-48 flex-none bg-cover rounded-t text-center overflow-hidden"></div>
           <div className="px-6 py-4">
             <div className="font-bold text-xl mb-2">Valores</div>
@@ -54,4 +54,4 @@ export function AboutUs() {
   );
 }
 
-export default AboutUs;
+export default SobreNos;
