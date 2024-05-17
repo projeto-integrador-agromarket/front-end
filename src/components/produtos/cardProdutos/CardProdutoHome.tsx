@@ -128,9 +128,10 @@ function CardProdutoHome(this: any, { produto }: CardProdutoProps) {
                         </p>
                       </div>
                       <div className="vendedor mb-5 flex flex-row items-center justify-center">
-                        <p className="rounded-full h-12">
-                          {produto.usuario?.foto}
-                        </p>
+                        <img
+                          className="rounded-full h-12"
+                          src={produto.usuario?.foto}
+                        />
                       </div>
                       <div className="grid grid-cols-1 gap-5">
                         {/* <button className="flex items-center justify-center rounded-md bg-light-gray-footer px-2 py-2.5 text-center text-sm font-bold text-black-new hover:bg-timber-wolf focus:outline-none focus:ring-4 focus:ring-blue-300">

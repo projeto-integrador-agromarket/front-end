@@ -34,7 +34,7 @@ function Home() {
               direto da fonte.
             </p>
             <Link
-              to="#"
+              to="/sobre"
               className=" max-w-32 mt-8 flex items-center justify-center rounded-md bg-meddium-green px-2 py-2.5 text-center text-sm font-bold text-white-new hover:bg-dark-green-login"
             >
               Saiba mais
@@ -100,7 +100,7 @@ function Home() {
               provident! Error assumenda neque corrupti consectetur placeat.
             </p>
             <Link
-              to="#"
+              to="/home"
               className=" max-w-32 mt-8 flex items-center justify-center rounded-md bg-meddium-green px-2 py-2.5 text-center text-sm font-bold text-white-new hover:bg-dark-green-login"
             >
               Ver produtos
