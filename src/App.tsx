@@ -17,11 +17,13 @@ import ExibirProduto from "./components/produtos/exibirProduto/ExibirProduto";
 import ModalExibirProduto from "./components/produtos/exibirProduto/ModalExibirProduto";
 import Contato from "./pages/contato/Contato";
 import SobreNos from "./pages/sobrenos/SobreNos";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
     <>
       <AuthProvider>
+        <ToastContainer />
         <BrowserRouter>
           <div className="min-h-[80vh]">
             <Routes>

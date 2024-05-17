@@ -3,6 +3,7 @@ import logo from "../../assets/logoEditado.png";
 import { ShoppingCart } from "@phosphor-icons/react";
 import { useContext } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
+import { toastAlerta } from "../../util/toastAlerta";
 
 function Navbar() {
   let navigate = useNavigate();
@@ -12,7 +13,7 @@ function Navbar() {
 
   function logout() {
     handleLogout();
-    alert("Usuário deslogado com sucesso");
+    toastAlerta("Usuário deslogado com sucesso", "sucesso");
     navigate("/login");
   }
 
