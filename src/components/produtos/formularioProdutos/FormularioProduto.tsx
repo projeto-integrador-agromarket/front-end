@@ -105,14 +105,14 @@ function FormularioProduto() {
             Authorization: token,
           },
         });
-        toastAlerta("Postagem atualizada com sucesso", "sucesso");
+        toastAlerta("Produto atualizado com sucesso", "sucesso");
         retornar();
       } catch (error: any) {
         if (error.toString().includes("403")) {
           toastAlerta("O token expirou, favor logar novamente", "info");
           handleLogout();
         } else {
-          toastAlerta("Erro ao atualizar a Postagem", "erro");
+          toastAlerta("Erro ao atualizar o Produto", "erro");
         }
       }
     } else {
@@ -123,13 +123,13 @@ function FormularioProduto() {
           },
         });
         retornar();
-        toastAlerta("Postagem cadastrada com sucesso", "sucesso");
+        toastAlerta("Produto cadastrado com sucesso", "sucesso");
       } catch (error: any) {
         if (error.toString().includes("403")) {
           //toastAlerta("O token expirou, favor logar novamente", "info");
           handleLogout();
         } else {
-          toastAlerta("Erro ao cadastrar a Postagem", "erro");
+          toastAlerta("Erro ao cadastrar o Produto", "erro");
         }
       }
     }

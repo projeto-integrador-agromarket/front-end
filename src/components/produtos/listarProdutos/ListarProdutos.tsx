@@ -9,7 +9,6 @@ import ModalProduto from "../modalProduto/ModalProduto";
 import { toastAlerta } from "../../../utils/toastAlerta";
 import Footer from "../../footer/Footer";
 import NavBar from "../../navbar/NavBar";
-//import { toastAlerta } from "../../../utils/toastAlerta";
 
 function ListarProdutos() {
   const [produtos, setProdutos] = useState<Produto[]>([]);
