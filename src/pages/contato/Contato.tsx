@@ -14,41 +14,33 @@ function Contato() {
           ></iframe>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center mb-3">
+      <div className="flex flex-col items-center justify-center">
         <div className="flex self-center justify-center my-16 font-semibold text-6xl w-full text-dark-blue-footer">
           <p>Ficou alguma dúvida? Entre em contato</p>
         </div>
         <div className="flex flex-row">
-          <div className="endereco bg-timber-wolf mx-10 size-72">
+          {/* <div className="endereco bg-timber-wolf mx-10 size-72 rounded">
             <p>Endereco</p>
-          </div>
-          <div className="flex flex-col items-center justify-center bg-sand-orange w-full max-w-5xl">
-            <p>Formulário de contato</p>
+          </div> */}
+          <div className="flex flex-col rounded items-center justify-center bg-sand-orange w-full max-w-5xl mr-3 mb-9 shadow-xl">
+            <p className="text-3xl mt-4 text-dark-blue-footer font-semibold">
+              Formulário de Contato
+            </p>
             <form className="flex flex-wrap p-10 justify-self-center">
               <input
                 type="text"
                 className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full md:w-[48%] mr-[2%]"
-                placeholder="Full Name"
+                placeholder="Nome"
               />
               <input
                 type="email"
                 className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full md:w-[48%] ml-[2%]"
-                placeholder="Email"
+                placeholder="E-mail"
               />
               <input
                 type="number"
                 className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full md:w-[48%] mr-[2%]"
-                placeholder="Phone Number"
-              />
-              <input
-                type="text"
-                className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full md:w-[48%] ml-[2%]"
-                placeholder="Company Name"
-              />
-              <input
-                type="text"
-                className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full md:w-[48%] mr-[2%]"
-                placeholder="Job Title"
+                placeholder="Celular"
               />
               <input
                 type="date"
@@ -57,17 +49,18 @@ function Contato() {
               />
               <textarea
                 name="message"
-                className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-auto md:mb-auto md:w-full md:h-auto md:min-h-[100px] md:max-h-[100px] md:flex-grow md:flex-shrink md:flex-auto focus:bg-gray-md:focus:outline-none:focus:ring-blue-md:focus:border-transparent transition ease-in-out duration-fastest"
-                placeholder="Message"
+                className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-auto md:mb-auto md:w-full md:h-auto md:min-h-[200px] md:max-h-[200px] md:flex-grow md:flex-shrink md:flex-auto focus:bg-gray-md:focus:outline-none:focus:ring-blue-md:focus:border-transparent transition ease-in-out duration-fastest"
+                placeholder="Escreva sua mensagem aqui..."
               ></textarea>
-
+            </form>
+            <div className="flex flex-row items-center self-center justify-center mb-5">
               <button
                 type="submit"
-                className="bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-bold py-2 px-4 rounded-md mt-4 hover:bg-indigo-600 hover:to-blue-600 transition ease-in-out duration-150"
+                className=" bg-meddium-green text-white-new font-bold py-2 px-10 rounded-md hover:bg-indigo-600 hover:bg-dark-green transition ease-in-out duration-150 justify-center self-center "
               >
                 Submit
               </button>
-            </form>
+            </div>
           </div>
         </div>
       </div>

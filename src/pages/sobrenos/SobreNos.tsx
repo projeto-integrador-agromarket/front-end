@@ -6,8 +6,11 @@ function SobreNos() {
   return (
     <>
       <NavBar />
-      <div className="flex justify-between">
-        <div className="max-w-xs bg-white rounded-lg overflow-hidden shadow-lg p-4">
+      <div className="flex self-center justify-center my-10 font-semibold text-6xl w-full text-dark-orange">
+        <p>Nossa missão, visão e valores</p>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 px-20 pt-20 pb-40 self-center justify-center">
+        <div className="max-w-xs bg-white rounded-lg overflow-hidden shadow-lg">
           <div className="primeiroCard bg-cover h-48 flex-none bg-cover rounded-t text-center overflow-hidden"></div>
           <div className="px-6 py-4">
             <div className="font-bold text-xl mb-2">Missão</div>
@@ -21,7 +24,7 @@ function SobreNos() {
           </div>
         </div>
 
-        <div className="max-w-xs bg-white rounded-lg overflow-hidden shadow-lg p-4">
+        <div className="max-w-xs bg-white rounded-lg overflow-hidden shadow-lg">
           <div className="segundoCard bg-cover h-48 flex-none bg-cover rounded-t text-center overflow-hidden"></div>
           <div className="px-6 py-4">
             <div className="font-bold text-xl mb-2">Visão</div>
@@ -35,7 +38,7 @@ function SobreNos() {
           </div>
         </div>
 
-        <div className="max-w-xs bg-white rounded-lg overflow-hidden shadow-lg p-4">
+        <div className="max-w-xs bg-white rounded-lg overflow-hidden shadow-lg">
           <div className="terceiroCard bg-cover h-48 flex-none bg-cover rounded-t text-center overflow-hidden"></div>
           <div className="px-6 py-4">
             <div className="font-bold text-xl mb-2">Valores</div>

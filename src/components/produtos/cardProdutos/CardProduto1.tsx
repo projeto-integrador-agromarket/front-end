@@ -11,6 +11,7 @@ interface CardProdutoProps {
 
 function CardProduto1(this: any, { produto }: CardProdutoProps) {
   const { adicionarProduto, removerProduto } = useContext(AuthContext);
+
   return (
     <>
       <div className="relative m-10 flex w-full max-w-sm flex-col overflow-hidden rounded-lg border border-light-gray-card bg-white-new shadow-2xl hover:bg-light-gray-card">

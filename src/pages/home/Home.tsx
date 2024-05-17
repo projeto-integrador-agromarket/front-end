@@ -67,10 +67,11 @@ function Home() {
               Seja nosso vendedor
             </h2>
             <p className="p-0">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
-              quisquam harum, voluptatem amet corporis, exercitationem
-              laboriosam optio eius magni pariatur consectetur similique dolore
-              provident! Error assumenda neque corrupti consectetur placeat.
+              Você é um pequeno agricultor em busca de uma plataforma para
+              mostrar seus produtos de qualidade? Venha fazer parte da nossa
+              comunidade de produtores! Valorizamos a autenticidade, a qualidade
+              e o compromisso com o cultivo responsável. Juntos, podemos levar
+              alimentos frescos e saudáveis para mais pessoas.
             </p>
             <div className="flex justify-end">
               <Link
@@ -94,10 +95,13 @@ function Home() {
               Compre produtos de qualidade
             </h2>
             <p className="p-0">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
-              quisquam harum, voluptatem amet corporis, exercitationem
-              laboriosam optio eius magni pariatur consectetur similique dolore
-              provident! Error assumenda neque corrupti consectetur placeat.
+              Na nossa plataforma, você encontrará uma variedade de produtos
+              frescos e deliciosos diretamente dos agricultores locais da sua
+              região. Valorizamos a qualidade, a sustentabilidade e o apoio à
+              comunidade, e cada produto reflete esse compromisso. Ao comprar
+              conosco, você não apenas obtém alimentos de alta qualidade, mas
+              também apoia os pequenos agricultores e promove práticas agrícolas
+              responsáveis.
             </p>
             <Link
               to="/home"
