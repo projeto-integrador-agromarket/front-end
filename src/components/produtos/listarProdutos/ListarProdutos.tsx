@@ -45,41 +45,78 @@ function ListarProdutos() {
     buscarProdutos();
   }, [produtos.length]);
 
-  return (
-    <>
-      <NavBar />
-      <div className="flex self-center justify-center my-16 font-semibold text-6xl w-full text-dark-orange">
-        <p>Produtos</p>
-      </div>
-      <div className="flex flex-col w-full p-5 justify-center items-center bg-timber-wolf">
-        <div>
-          <p className="self-center justify-center font-semibold text-2xl text-black-new">
-            Você é vendedor? Cadastre um produto agora mesmo
-          </p>
-        </div>
-        <div className="mt-4 bg-meddium-green text-xl shadow-xl hover:bg-dark-green-login">
-          <ModalProduto />
-        </div>
-      </div>
-      {produtos.length === 0 && (
-        <Dna
-          visible={true}
-          height="200"
-          width="200"
-          ariaLabel="dna-loading"
-          wrapperStyle={{}}
-          wrapperClass="dna-wrapper mx-auto"
-        />
-      )}
-      <div className="container mx-auto my-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {produtos.map((produto) => (
-          <CardProduto key={produto.id} produto={produto} />
-        ))}
-      </div>
+  let listarProdutoComponent;
 
-      <Footer />
-    </>
-  );
+  if (usuario.token !== "" && usuario.tipo === "vendedor") {
+    listarProdutoComponent = (
+      <>
+        <NavBar />
+        <div className="flex self-center justify-center my-16 font-semibold text-6xl w-full text-dark-orange">
+          <p>Produtos</p>
+        </div>
+        <div className="flex flex-col w-full p-5 justify-center items-center bg-timber-wolf">
+          <div>
+            <p className="self-center justify-center font-semibold text-2xl text-black-new">
+              Você é vendedor? Cadastre um produto agora mesmo
+            </p>
+          </div>
+          <div className="mt-4 bg-meddium-green text-xl shadow-xl hover:bg-dark-green-login">
+            <ModalProduto />
+          </div>
+        </div>
+        {produtos.length === 0 && (
+          <Dna
+            visible={true}
+            height="200"
+            width="200"
+            ariaLabel="dna-loading"
+            wrapperStyle={{}}
+            wrapperClass="dna-wrapper mx-auto"
+          />
+        )}
+        <div className="container mx-auto my-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {produtos.map((produto) => (
+            <CardProduto key={produto.id} produto={produto} />
+          ))}
+        </div>
+
+        <Footer />
+      </>
+    );
+  } else {
+    listarProdutoComponent = (
+      <>
+        <NavBar />
+        <div className="flex self-center justify-center my-16 font-semibold text-6xl w-full text-dark-orange">
+          <p>Produtos</p>
+        </div>
+        <div className="flex flex-col w-full p-5 justify-center items-center bg-timber-wolf">
+          <div className="mt-4 bg-meddium-green text-xl shadow-xl hover:bg-dark-green-login">
+            <ModalProduto />
+          </div>
+        </div>
+        {produtos.length === 0 && (
+          <Dna
+            visible={true}
+            height="200"
+            width="200"
+            ariaLabel="dna-loading"
+            wrapperStyle={{}}
+            wrapperClass="dna-wrapper mx-auto"
+          />
+        )}
+        <div className="container mx-auto my-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {produtos.map((produto) => (
+            <CardProduto key={produto.id} produto={produto} />
+          ))}
+        </div>
+
+        <Footer />
+      </>
+    );
+  }
+
+  return <>{listarProdutoComponent}</>;
 }
 
 export default ListarProdutos;

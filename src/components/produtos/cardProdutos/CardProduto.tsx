@@ -56,19 +56,6 @@ function CardProduto({ produto }: CardProdutoProps) {
         </div>
       </div>
       <div className="flex">
-        <Link
-          to={`/editarProduto/${produto.id}`}
-          className="w-full text-white bg-indigo-400 hover:bg-indigo-800 flex items-center justify-center py-2"
-        >
-          <button>Editar</button>
-        </Link>
-        <Link
-          to={`/deletarProduto/${produto.id}`}
-          className="text-white bg-red-400 hover:bg-red-700 w-full flex items-center justify-center"
-        >
-          <button>Deletar</button>
-        </Link>
-
         <button
           className="bg-new-green hover:bg-new-dark-green text-white font-semibold py-2 px-4 rounded mr-5 mb-1"
           onClick={() => adicionarProduto(produto)}

@@ -74,7 +74,7 @@ function Home() {
             </p>
             <div className="flex justify-end">
               <Link
-                to="#"
+                to="/cadastro"
                 className=" w-2/6 mt-8 flex items-center justify-center rounded-md bg-meddium-green px-2 py-2.5 text-center text-sm font-bold text-white-new hover:bg-dark-green-login "
               >
                 Faça o cadastro

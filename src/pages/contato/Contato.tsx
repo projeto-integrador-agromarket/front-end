@@ -1,6 +1,6 @@
-import React from 'react'
-import Footer from '../../components/footer/Footer'
-import NavBar from '../../components/navbar/NavBar'
+import React from "react";
+import Footer from "../../components/footer/Footer";
+import NavBar from "../../components/navbar/NavBar";
 
 function Contato() {
   return (
@@ -8,10 +8,13 @@ function Contato() {
       <NavBar />
       <div>
         <div className="mapa p-10 flex">
-          <iframe className="w-full h-80 justify-self-center" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3657.2137061271683!2d-46.637713!3d-23.560767!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59a5bff1d98b%3A0xba99ce77224a3a99!2sAv.%20da%20Liberdade%2C%20899%20-%20Liberdade%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001503-001!5e0!3m2!1spt-BR!2sbr!4v1701488595521!5m2!1spt-BR!2sbr"></iframe>
+          <iframe
+            className="w-full h-80 justify-self-center"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3657.2137061271683!2d-46.637713!3d-23.560767!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59a5bff1d98b%3A0xba99ce77224a3a99!2sAv.%20da%20Liberdade%2C%20899%20-%20Liberdade%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001503-001!5e0!3m2!1spt-BR!2sbr!4v1701488595521!5m2!1spt-BR!2sbr"
+          ></iframe>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center mb-3">
         <div className="flex self-center justify-center my-16 font-semibold text-6xl w-full text-dark-blue-footer">
           <p>Ficou alguma dúvida? Entre em contato</p>
         </div>
@@ -69,13 +72,9 @@ function Contato() {
         </div>
       </div>
 
-
-
       <Footer />
     </>
-
-
-  )
+  );
 }
 
-export default Contato
+export default Contato;
