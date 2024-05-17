@@ -5,7 +5,7 @@ import Categoria from "../../../models/Categoria";
 import { buscar } from "../../../services/Service";
 import CardCategorias from "../cardCategorias/CardCategorias";
 import { Dna } from "react-loader-spinner";
-import { toastAlerta } from "../../../util/toastAlerta";
+import { toastAlerta } from "../../../utils/toastAlerta";
 
 function ListarCategorias() {
   const [categorias, setCategorias] = useState<Categoria[]>([]);

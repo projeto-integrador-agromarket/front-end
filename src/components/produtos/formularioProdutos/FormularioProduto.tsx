@@ -4,7 +4,7 @@ import { AuthContext } from "../../../contexts/AuthContext";
 import Produto from "../../../models/Produto";
 import Categoria from "../../../models/Categoria";
 import { buscar, atualizar, cadastrar } from "../../../services/Service";
-import { toastAlerta } from "../../../util/toastAlerta";
+import { toastAlerta } from "../../../utils/toastAlerta";
 
 function FormularioProduto() {
   let navigate = useNavigate();
@@ -140,7 +140,7 @@ function FormularioProduto() {
   return (
     <div className="container flex flex-col mx-auto items-center">
       <h1 className="text-4xl text-center my-8">
-        {id !== undefined ? "Editar Postagem" : "Cadastrar Postagem"}
+        {id !== undefined ? "Editar Produto" : "Cadastrar Produto"}
       </h1>
 
       <form onSubmit={GerarNovoProduto} className="flex flex-col w-1/2 gap-4">

@@ -2,6 +2,7 @@ import { Copyright } from "@phosphor-icons/react";
 import Logo from "../../assets/logoEditado.png";
 import { useContext } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
+import { Link } from "react-router-dom";
 
 function Footer() {
   const { usuario } = useContext(AuthContext);
@@ -17,7 +18,7 @@ function Footer() {
               {/* <h4 className="text-2xl pb-4">Logo</h4> */}
               <img src={Logo} className="h-20 p-0 -mt-6 mb-3" />
               <p className="text-light-gray-footer">
-                Rua Insira uma rua aqui
+                Rua Nosso Pomar
                 <br />
                 Brasil
                 <br />
@@ -34,34 +35,34 @@ function Footer() {
                 <li className="pb-3">
                   {" "}
                   <i className="fa fa-chevron-right text-meddium-orange"></i>
-                  <a href="#" className="hover:text-meddium-orange">
+                  <Link to="/home" className="hover:text-meddium-orange">
                     {" "}
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li className="pb-3">
                   {" "}
                   <i className="fa fa-chevron-right text-meddium-orange"></i>
-                  <a href="#" className="hover:text-meddium-orange">
+                  <Link to="/sobre" className="hover:text-meddium-orange">
                     {" "}
                     Sobre nós
-                  </a>
+                  </Link>
                 </li>
                 <li className="pb-3">
                   {" "}
                   <i className="fa fa-chevron-right text-meddium-orange"></i>
-                  <a href="#" className="hover:text-meddium-orange">
+                  <Link to="/contato" className="hover:text-meddium-orange">
                     {" "}
                     Fale conosco
-                  </a>
+                  </Link>
                 </li>
                 <li className="pb-3">
                   {" "}
                   <i className="fa fa-chevron-right text-meddium-orange"></i>
-                  <a href="#" className="hover:text-meddium-orange">
+                  <Link to="/home" className="hover:text-meddium-orange">
                     {" "}
                     Política de Privacidade
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -71,34 +72,34 @@ function Footer() {
                 <li className="pb-3">
                   {" "}
                   <i className="fa fa-chevron-right text-meddium-orange"></i>
-                  <a href="#" className="hover:text-meddium-orange">
+                  <Link to="/home" className="hover:text-meddium-orange">
                     {" "}
                     Lojas Virtuais
-                  </a>
+                  </Link>
                 </li>
                 <li className="pb-3">
                   {" "}
                   <i className="fa fa-chevron-right text-meddium-orange"></i>
-                  <a href="#" className="hover:text-meddium-orange">
+                  <Link to="/home" className="hover:text-meddium-orange">
                     {" "}
                     Produtos
-                  </a>
+                  </Link>
                 </li>
                 <li className="pb-3">
                   {" "}
                   <i className="fa fa-chevron-right text-meddium-orange"></i>
-                  <a href="#" className="hover:text-meddium-orange">
+                  <Link to="/home" className="hover:text-meddium-orange">
                     {" "}
                     Categorias
-                  </a>
+                  </Link>
                 </li>
                 <li className="pb-3">
                   {" "}
                   <i className="fa fa-chevron-right text-meddium-orange"></i>
-                  <a href="#" className="hover:text-meddium-orange">
+                  <Link to="/home" className="hover:text-meddium-orange">
                     {" "}
                     Marketplace
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

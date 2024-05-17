@@ -4,13 +4,11 @@ import Produto from "../../../models/Produto";
 import { AuthContext } from "../../../contexts/AuthContext";
 import { useContext } from "react";
 import { MdAddShoppingCart } from "react-icons/md";
-import { toastAlerta } from "../../../util/toastAlerta";
-
+import { toastAlerta } from "../../../utils/toastAlerta";
 
 interface CardProdutoProps {
   produto: Produto;
 }
-
 
 /*export default interface Produto {
   id: number;
@@ -24,8 +22,7 @@ interface CardProdutoProps {
 } */
 
 function CardProduto({ produto }: CardProdutoProps) {
-
-  const { adicionarProduto, removerProduto } = useContext(AuthContext)
+  const { adicionarProduto, removerProduto } = useContext(AuthContext);
 
   return (
     <div className="border-slate-900 border flex flex-col rounded overflow-hidden justify-between">
@@ -59,28 +56,20 @@ function CardProduto({ produto }: CardProdutoProps) {
         </div>
       </div>
       <div className="flex">
-        <Link
-          to={`/editarProduto/${produto.id}`}
-          className="w-full text-white bg-indigo-400 hover:bg-indigo-800 flex items-center justify-center py-2"
+        <button
+          className="bg-new-green hover:bg-new-dark-green text-white font-semibold py-2 px-4 rounded mr-5 mb-1"
+          onClick={() => adicionarProduto(produto)}
         >
-          <button>Editar</button>
-        </Link>
-        <Link
-          to={`/deletarProduto/${produto.id}`}
-          className="text-white bg-red-400 hover:bg-red-700 w-full flex items-center justify-center"
+          <MdAddShoppingCart size={28} />
+        </button>
+
+        <button
+          className="bg-red hover:bg-dark-red text-white-new font-semibold py-2 px-4 rounded mr-2 mb-1"
+          onClick={() => removerProduto(produto.id)}
         >
-          <button>Deletar</button>
-         
-        </Link>
-
-                <button className="bg-new-green hover:bg-new-dark-green text-white font-semibold py-2 px-4 rounded mr-5 mb-1"
-                    onClick={() => adicionarProduto(produto)}><MdAddShoppingCart size={28}/></button>
-                
-
-                <button className="bg-red hover:bg-dark-red text-white-new font-semibold py-2 px-4 rounded mr-2 mb-1"
-                    onClick={() => removerProduto(produto.id)}>Remover</button>
-            </div>
-        
+          Remover
+        </button>
+      </div>
     </div>
   );
 }

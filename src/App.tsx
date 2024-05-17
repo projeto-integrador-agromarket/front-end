@@ -16,12 +16,15 @@ import CardProduto1 from "./components/produtos/cardProdutos/CardProduto1";
 import ExibirProduto from "./components/produtos/exibirProduto/ExibirProduto";
 import ModalExibirProduto from "./components/produtos/exibirProduto/ModalExibirProduto";
 import Contato from "./pages/contato/Contato";
-import AboutUs from "./pages/aboutus/AboutUs";
+import SobreNos from "./pages/sobrenos/SobreNos";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
     <>
       <AuthProvider>
+        <ToastContainer />
         <BrowserRouter>
           <div className="min-h-[80vh]">
             <Routes>
@@ -52,8 +55,11 @@ function App() {
               />
               <Route path="/deletarProduto/:id" element={<DeletarProduto />} />
               <Route path="/cart" element={<Cart />} />
-              <Route path="/sobre" element={<AboutUs />} />
-              <Route path="/exibirProduto/:id" element={<ModalExibirProduto />} />
+              <Route path="/sobre" element={<SobreNos />} />
+              <Route
+                path="/exibirProduto/:id"
+                element={<ModalExibirProduto />}
+              />
             </Routes>
           </div>
         </BrowserRouter>
