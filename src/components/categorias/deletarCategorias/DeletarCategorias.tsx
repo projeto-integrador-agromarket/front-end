@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router";
 import { AuthContext } from "../../../contexts/AuthContext";
 import { buscar, deletar } from "../../../services/Service";
 import Categoria from "../../../models/Categoria";
-import { toastAlerta } from "../../../util/toastAlerta";
+import { toastAlerta } from "../../../utils/toastAlerta";
 
 function DeletarCategoria() {
   const [categoria, setCategoria] = useState<Categoria>({} as Categoria);

@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { AuthContext } from "../../../contexts/AuthContext";
 import Categoria from "../../../models/Categoria";
 import { atualizar, buscar, cadastrar } from "../../../services/Service";
-import { toastAlerta } from "../../../util/toastAlerta";
+import { toastAlerta } from "../../../utils/toastAlerta";
 
 function FormularioCategoria() {
   const [categoria, setCategoria] = useState<Categoria>({} as Categoria);

@@ -6,7 +6,7 @@ import Produto from "../../../models/Produto";
 import { buscar } from "../../../services/Service";
 import CardProduto from "../cardProdutos/CardProduto1";
 import ModalProduto from "../modalProduto/ModalProduto";
-import { toastAlerta } from "../../../util/toastAlerta";
+import { toastAlerta } from "../../../utils/toastAlerta";
 import Footer from "../../footer/Footer";
 import NavBar from "../../navbar/NavBar";
 //import { toastAlerta } from "../../../utils/toastAlerta";
@@ -53,7 +53,9 @@ function ListarProdutos() {
       </div>
       <div className="flex flex-col w-full p-5 justify-center items-center bg-timber-wolf">
         <div>
-          <p className="self-center justify-center font-semibold text-2xl text-black-new">Você é vendedor? Cadastre um produto agora mesmo</p>
+          <p className="self-center justify-center font-semibold text-2xl text-black-new">
+            Você é vendedor? Cadastre um produto agora mesmo
+          </p>
         </div>
         <div className="mt-4 bg-meddium-green text-xl shadow-xl hover:bg-dark-green-login">
           <ModalProduto />

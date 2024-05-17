@@ -18,6 +18,7 @@ import ModalExibirProduto from "./components/produtos/exibirProduto/ModalExibirP
 import Contato from "./pages/contato/Contato";
 import SobreNos from "./pages/sobrenos/SobreNos";
 import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (

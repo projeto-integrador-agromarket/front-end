@@ -4,7 +4,7 @@ import { AuthContext } from "../../../contexts/AuthContext";
 import Produto from "../../../models/Produto";
 import Categoria from "../../../models/Categoria";
 import { buscar, atualizar, cadastrar } from "../../../services/Service";
-import { toastAlerta } from "../../../util/toastAlerta";
+import { toastAlerta } from "../../../utils/toastAlerta";
 
 function FormularioProduto() {
   let navigate = useNavigate();
