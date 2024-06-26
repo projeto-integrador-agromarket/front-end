@@ -16,7 +16,7 @@ function Home() {
       <div className="flex self-center justify-center my-16 font-semibold text-6xl w-full text-dark-orange">
         <p>Confira nossos produtos</p>
       </div>
-      <CarrosselProdutos />
+      {/*<CarrosselProdutos />*/}
 
       {/* Postagem - inicio */}
       <div className="m-16 p-20 items-center">
